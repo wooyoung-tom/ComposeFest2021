@@ -61,6 +61,9 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../start/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../start/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../start/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../start/build/generated/ap_generated_sources/debugAndroidTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../start/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../start/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../start/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../start/build" />
     </content>

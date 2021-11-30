@@ -85,8 +85,22 @@ fun TodoScreen(
  * @param modifier modifier for this element
  */
 @Composable
-fun TodoRow(todo: TodoItem, onItemClicked: (TodoItem) -> Unit, modifier: Modifier = Modifier) {
-    val iconAlpha = randomTint()
+fun TodoRow(
+    todo: TodoItem,
+    onItemClicked: (TodoItem) -> Unit,
+    modifier: Modifier = Modifier,
+    /**
+     * note. [Composable]에 memory 를 추가하려 할 때,
+     * "이 함수를 control 하려는 caller 가 있을까?"라고 되뇌어야합니다.
+     * 답이 YES 라면, parameter 를 만드는 게 옳습니다.
+     * 답이 NO 라면, 지역변수로 그대로 두는 것이 옳습니다.
+     *
+     * 여기서는, [TodoRow]를 호출하는 caller 에서 [iconAlpha]를 control 할 수 있도록 parameter 로 설정하였습니다.
+     */
+    iconAlpha: Float = remember(key1 = todo.id) {
+        randomTint()
+    }
+) {
     Row(
         modifier = modifier
             .clickable { onItemClicked(todo) }
